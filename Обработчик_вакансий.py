@@ -10,6 +10,7 @@ from catboost import CatBoostClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 #import xlsxwriter
+import openpyxl
 
 
 st.set_page_config(
@@ -38,7 +39,7 @@ def load_model():
 @st.cache_data
 def load_data():
     '''Загрузка файла'''
-    data = pd.read_excel('data/dataset.xlsx').head(10)
+    data = pd.read_excel('data/dataset.xlsx', engine='openpyxl').head(10)
     return data
 def tfidf_featuring(tfidf, df):
     '''Преобразование текста в мешок слов'''
