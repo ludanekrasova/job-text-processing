@@ -10,7 +10,7 @@ from catboost import CatBoostClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 #import xlsxwriter
-import openpyxl
+#import openpyxl
 
 
 st.set_page_config(
