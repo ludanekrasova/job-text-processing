@@ -9,6 +9,7 @@ import streamlit as st
 from catboost import CatBoostClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
+import xlsxwriter
 
 
 st.set_page_config(
